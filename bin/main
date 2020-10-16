@@ -48,7 +48,7 @@ while on == true
   end
 
   win = rand(0..9)
-  if  win <= 5 && turn >= 4
+  if win <= 5 && turn >= 4
     puts "#{player1} Won this game! #{player2} Good luck next time!"
     on = false
   elsif win <= 5 && turn >= 4
