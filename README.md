@@ -37,9 +37,9 @@ To run our project type 'ruby enumerable.rb' in your terminal where your file is
 
 👤 **David Leonardo**
 
-- GitHub: [@thneves](https://github.com/thneves)
-- LinkedIn: [@thales-neves10](https://www.linkedin.com/in/thales-neves10/)
-- Twitter: [@tsneves11](https://twitter.com/tsneves11)
+- Github: [@David Castillo](https://github.com/Fanger53)
+- Twitter: [@David Castillo](https://twitter.com/DavidLe97005129)
+- Linkedin: [@David Castillo](https://www.linkedin.com/in/david-castillo-61ba10b8/)
 
 ## 🤝 Contributing
 
