@@ -1,3 +1,31 @@
 #!/usr/bin/env ruby
 
 puts "Hello World!"
+
+puts "welcome to tic tac toe game for to play use X or O to fill the sapces on the board"
+
+puts "player1 = X"
+puts "player2 = O"
+
+puts "display the board"
+
+puts "turn player1"
+player1 = gets.chomp
+
+puts "display input #{player1} on board"
+
+puts "turn player2"
+player2 = gets.chomp
+
+puts "display input player2 on board"
+
+puts "next turn player1"
+
+player1 = gets.chomp
+puts "display input player1 on board"
+
+player2 = gets.chomp
+puts "display input player2 on board"
+
+puts "player1 player2 get input until one player win or draw the game "
+
