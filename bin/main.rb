@@ -24,7 +24,6 @@ puts 'Displaying the game board'
 puts ''
 
 turn = 0
-invalid = true
 while on == true
   if turn.even?
     puts "#{player1} is your turn! What will be your play?"
@@ -44,18 +43,18 @@ while on == true
   elsif ![1, 2, 3, 4, 5, 6, 7, 8, 9].include?(position.to_i)
     puts 'INVALID INPUT TRY USING 1 TO 9'
     puts ''
-    return invalid
   end
 
   win = rand(0..9)
-  if win <= 5 && turn >= 4
+  if win <= 5 && turn >= 4 # PLAYER 1 WINS
     puts "#{player1} Won this game! #{player2} Good luck next time!"
     on = false
-  elsif win <= 5 && turn >= 4
+  elsif win <= 5 && turn >= 4 # PLAYER 2 WINS
     puts "#{player1} Won this game! #{player2} Good luck next time!"
     on = false
-  elsif turn == 9
+  elsif turn == 9 # DRAW
     puts 'The game has ended in a DRAW! GG WP'
+    on = false
   end
   turn += 1
 end
