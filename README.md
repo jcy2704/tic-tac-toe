@@ -24,7 +24,7 @@ Internet browser: Firefox, Google Chrome, Opera...
 Download the code or copy the git repository to your computer.
 
 ### Usage
-To run our project type 'ruby enumerable.rb' in your terminal where your file is stored.
+To run our project type 'bin/main.rb' in your terminal where your file is stored.
 
 
 ## Authors
