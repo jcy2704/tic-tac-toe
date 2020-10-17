@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
+# rubocop:disable Layout/LineLength
 
 puts 'Hello World!'
 puts ''
 on = true
 
-slots = { '1' => "\s", '2' => "\s", '3' => "\s", '4' => "\s", '5' => "\s", '6' => "\s", '7' => "\s", '8' => "\s", '9' => "\s"}
+slots = { '1' => "\s", '2' => "\s", '3' => "\s", '4' => "\s", '5' => "\s", '6' => "\s", '7' => "\s", '8' => "\s", '9' => "\s" }
 
 puts 'Welcome to Tic Tac Toe! To play use X or O to fill the spaces on the board and try to connect 3.'
 puts ''
@@ -65,3 +66,5 @@ while on == true
   end
   turn += 1
 end
+
+# rubocop:enable Layout/LineLength
