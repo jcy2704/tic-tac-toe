@@ -2,7 +2,7 @@
 
 # TIC TAC TOE
 
-Created basic user interface mocking the basic flow of the game
+Setup for the TIC TAC TOE
 
 
 ## Built With
@@ -11,7 +11,7 @@ Created basic user interface mocking the basic flow of the game
 
 ## Getting Started
 
-**Basic User interface mocking basic flow of TIC TAC TOE**
+**Setup for starting the TIC TAC TOE**
 
 
 To get a local copy up and running follow these simple example steps.
@@ -24,7 +24,7 @@ Internet browser: Firefox, Google Chrome, Opera...
 Download the code or copy the git repository to your computer.
 
 ### Usage
-To run our project type 'ruby enumerable.rb' in your terminal where your file is stored.
+To run our project type 'bin/main.rb' in your terminal where your file is stored.
 
 
 ## Authors
