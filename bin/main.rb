@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# rubocop:disable Layout/LineLength
 
 require_relative '../lib/player.rb'
 require_relative '../lib/board.rb'
@@ -13,13 +12,17 @@ puts ''
 puts 'Enter your name Player 1: '
 nickname1 = gets.chomp.capitalize
 player_one = Player.new(nickname1)
-puts "Player one nickname: #{nickname1} will be X"
 puts ''
 
 puts 'Enter your name Player 2: '
 nickname2 = gets.chomp.capitalize
 player_two = Player.new(nickname2)
-puts "Player two nickname: #{nickname2} will be O"
+puts ''
+token1 = player_one.token
+puts "#{nickname1} will be #{token1}"
+puts ''
+token2 = player_two.token
+puts "#{nickname2} will be #{token2}"
 puts ''
 
 puts 'Displaying the game board'
@@ -35,10 +38,10 @@ while on == true
   until checked == true
     if turn.odd?
       puts "#{nickname1} is your turn! What will be your play?"
-      token = 'X'
+      token = token1
     else
       puts "#{nickname2} is your turn! What will be your play?"
-      token = 'O'
+      token = token2
     end
     position = gets.chomp
     check = d_board.check(position)
@@ -80,4 +83,3 @@ while on == true
   turn += 1
 end
 
-# rubocop:enable Layout/LineLength
