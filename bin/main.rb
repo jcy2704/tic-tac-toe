@@ -78,6 +78,6 @@ while on == true
     on = false
   end
   turn += 1
-end
 
+end
 # rubocop:enable Layout/LineLength
