@@ -1,17 +1,14 @@
 #!/usr/bin/env ruby
 # rubocop:disable Layout/LineLength
 
-class Player
-  def initialize(name)
-    @name = name
-  end
-end
+require_relative '../lib/player.rb'
+require_relative '../lib/board.rb'
 
 puts 'Hello World!'
 puts ''
 on = true
 
-slots = { '1' => "\s", '2' => "\s", '3' => "\s", '4' => "\s", '5' => "\s", '6' => "\s", '7' => "\s", '8' => "\s", '9' => "\s" }
+# slots = { '1' => "\s", '2' => "\s", '3' => "\s", '4' => "\s", '5' => "\s", '6' => "\s", '7' => "\s", '8' => "\s", '9' => "\s" }
 
 puts 'Welcome to Tic Tac Toe! To play use X or O to fill the spaces on the board and try to connect 3.'
 puts ''
@@ -19,42 +16,45 @@ puts ''
 
 
 puts 'Enter your name Player 1: '
-player1 = gets.chomp
-puts ''
+nickname1 = gets.chomp
+player_one = Player.new(nickname1)
+puts "player one nickname: #{nickname1} will be X"
 
 puts 'Enter your name Player 2: '
-player2 = gets.chomp
-puts ''
+nickname2 = gets.chomp
+player_two = Player.new(nickname2)
+puts "player two nickname: #{nickname2} will be O"
 
-puts "#{player1} will be X"
-puts "#{player2} will be O"
-puts ''
-puts ''
+
 
 puts 'Displaying the game board'
 puts ''
 
-puts "[#{slots['1']}]  [#{slots['2']}]  [#{slots['3']}]\n 1    2    3\n[#{slots['4']}]  [#{slots['5']}]  [#{slots['6']}]\n 4    5    6\n[#{slots['7']}]  [#{slots['8']}]  [#{slots['9']}]\n 7    8    9"
-puts ''
+d_board = Board.new
+puts d_board.display_boards
 
 turn = 0
 while on == true
   if turn.even?
-    puts "#{player1} is your turn! What will be your play?"
+    puts "#{nickname1} is your turn! What will be your play?"
+    token = 'X'
   else
-    puts "#{player2} is your turn! What will be your play?"
+    puts "#{nickname2} is your turn! What will be your play?"
+    token = 'o'
   end
   position = gets.chomp
+  d_board.check(position)
+  d_board.replace(position, token)
   puts ''
 
   if [1, 2, 3, 4, 5, 6, 7, 8, 9].include?(position.to_i)
     if turn.even?
-      puts "#{player1} placed X in #{position}"
+      puts "#{nickname1} placed X in #{position}"
     else
-      puts "#{player2} placed O in #{position}"
+      puts "#{nickname2} placed O in #{position}"
     end
     puts ''
-    puts "[#{slots['1']}]  [#{slots['2']}]  [#{slots['3']}]\n 1    2    3\n[#{slots['4']}]  [#{slots['5']}]  [#{slots['6']}]\n 4    5    6\n[#{slots['7']}]  [#{slots['8']}]  [#{slots['9']}]\n 7    8    9"
+    puts d_board.display_boards
     puts ''
   elsif ![1, 2, 3, 4, 5, 6, 7, 8, 9].include?(position.to_i)
     puts 'INVALID INPUT TRY USING 1 TO 9'
