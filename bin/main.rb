@@ -4,54 +4,59 @@
 require_relative '../lib/player.rb'
 require_relative '../lib/board.rb'
 
-puts 'Hello World!'
-puts ''
 on = true
 
-# slots = { '1' => "\s", '2' => "\s", '3' => "\s", '4' => "\s", '5' => "\s", '6' => "\s", '7' => "\s", '8' => "\s", '9' => "\s" }
-
+puts ''
 puts 'Welcome to Tic Tac Toe! To play use X or O to fill the spaces on the board and try to connect 3.'
 puts ''
 
-
-
 puts 'Enter your name Player 1: '
-nickname1 = gets.chomp
+nickname1 = gets.chomp.capitalize
 player_one = Player.new(nickname1)
-puts "player one nickname: #{nickname1} will be X"
+puts "Player one nickname: #{nickname1} will be X"
+puts ''
 
 puts 'Enter your name Player 2: '
-nickname2 = gets.chomp
+nickname2 = gets.chomp.capitalize
 player_two = Player.new(nickname2)
-puts "player two nickname: #{nickname2} will be O"
-
-
+puts "Player two nickname: #{nickname2} will be O"
+puts ''
 
 puts 'Displaying the game board'
 puts ''
 
 d_board = Board.new
 puts d_board.display_boards
+puts ''
 
-turn = 0
+turn = 1
 while on == true
-  if turn.even?
-    puts "#{nickname1} is your turn! What will be your play?"
-    token = 'X'
-  else
-    puts "#{nickname2} is your turn! What will be your play?"
-    token = 'o'
+  checked = false
+  until checked == true
+    if turn.odd?
+      puts "#{nickname1} is your turn! What will be your play?"
+      token = 'X'
+    else
+      puts "#{nickname2} is your turn! What will be your play?"
+      token = 'O'
+    end
+    position = gets.chomp
+    check = d_board.check(position)
+    if check == 'INVALID OPTION'
+      puts ''
+      puts 'INVALID OPTION! PLEASE INPUT IN AN EMPTY CELL'
+    else
+      d_board.replace(position, token)
+      checked = true
+    end
+    puts ''
   end
-  position = gets.chomp
-  d_board.check(position)
-  d_board.replace(position, token)
-  puts ''
 
   if [1, 2, 3, 4, 5, 6, 7, 8, 9].include?(position.to_i)
-    if turn.even?
-      puts "#{nickname1} placed X in #{position}"
+    if turn.odd?
+      puts "#{nickname1} placed X in slot #{position}"
     else
-      puts "#{nickname2} placed O in #{position}"
+      puts "#{nickname2} placed O in slot #{position}"
     end
     puts ''
     puts d_board.display_boards
@@ -68,7 +73,7 @@ while on == true
   elsif win <= 5 && turn >= 4 # PLAYER 2 WINS
     puts "#{player1} Won this game! #{player2} Good luck next time!"
     on = false
-  elsif turn == 7 # DRAW
+  elsif turn >= 7 # DRAW
     puts 'The game has ended in a DRAW! GG WP'
     on = false
   end
