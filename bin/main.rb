@@ -69,17 +69,19 @@ while on == true
     puts ''
   end
 
-  win = rand(0..9)
-  if win <= 5 && turn >= 4 # PLAYER 1 WINS
-    puts "#{player1} Won this game! #{player2} Good luck next time!"
-    on = false
-  elsif win <= 5 && turn >= 4 # PLAYER 2 WINS
-    puts "#{player1} Won this game! #{player2} Good luck next time!"
-    on = false
-  elsif turn >= 7 # DRAW
-    puts 'The game has ended in a DRAW! GG WP'
-    on = false
-  end
+  puts d_board.win?
+   
+  # win = rand(0..9)
+  # if win <= 5 && turn >= 4 # PLAYER 1 WINS
+  #   puts "#{player1} Won this game! #{player2} Good luck next time!"
+  #   on = false
+  # elsif win <= 5 && turn >= 4 # PLAYER 2 WINS
+  #   puts "#{player1} Won this game! #{player2} Good luck next time!"
+  #   on = false
+  # elsif turn >= 7 # DRAW
+  #   puts 'The game has ended in a DRAW! GG WP'
+  #   on = false
+  # end
   turn += 1
 
 end
