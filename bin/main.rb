@@ -1,6 +1,12 @@
 #!/usr/bin/env ruby
 # rubocop:disable Layout/LineLength
 
+class Player
+  def initialize(name)
+    @name = name
+  end
+end
+
 puts 'Hello World!'
 puts ''
 on = true
@@ -9,6 +15,8 @@ slots = { '1' => "\s", '2' => "\s", '3' => "\s", '4' => "\s", '5' => "\s", '6' =
 
 puts 'Welcome to Tic Tac Toe! To play use X or O to fill the spaces on the board and try to connect 3.'
 puts ''
+
+
 
 puts 'Enter your name Player 1: '
 player1 = gets.chomp
