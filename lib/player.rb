@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Creates a Player
 class Player
   attr_accessor :name
   def initialize(name)
@@ -12,10 +13,8 @@ class Player
   end
 end
 
-module PlayerStuff
-  def leftover(one, two)
-    two = 'O' if one == 'X'
-    two = 'X' if one == 'O'
-    two
-  end
+def leftover(one, two)
+  two = 'O' if one == 'X'
+  two = 'X' if one == 'O'
+  two
 end

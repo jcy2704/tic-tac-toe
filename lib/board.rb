@@ -2,6 +2,8 @@
 
 # rubocop:disable Layout/LineLength
 # rubocop:disable Metrics/AbcSize
+
+# Creates a Board Class
 class Board
   attr_accessor :slots
   def initialize
