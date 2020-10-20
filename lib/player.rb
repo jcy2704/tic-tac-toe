@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Creates a Player
 class Player
   attr_accessor :name
