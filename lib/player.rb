@@ -5,11 +5,22 @@ class Player
   attr_accessor :name
   def initialize(name)
     @name = name
+    @players = {}
     @tokens = %w[X O]
+    @points = 0
   end
 
   def token
     @tokens.shuffle.each { |n| return n }
+  end
+
+  def won(player)
+    @points += 1
+    @players[player] = @points
+  end
+
+  def score(player)
+    @players[player]
   end
 end
 

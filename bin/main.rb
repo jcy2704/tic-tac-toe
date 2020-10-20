@@ -3,15 +3,26 @@
 
 require_relative '../lib/player.rb'
 require_relative '../lib/board.rb'
+require 'io/console'
 
 on = true
 
 system 'clear'
 system 'cls'
+game = Game.new
 
 puts ''
-puts 'Welcome to Tic Tac Toe! To play use X or O to fill the spaces on the board and try to connect 3.'
-puts ''
+puts '                        Welcome to Tic Tac Toe!'
+puts '                   by Jack Chung and David Leonardo'
+puts "\nInstructions: \n"
+puts '1. Both players need to input their nicknames.'
+puts '2. After naming, you will see your assigned token (X or O)'
+puts '3. To win the game you need to connect 3 of your token in a linear way.'
+puts "For example:\n      [X] [X] [X]\n      [X] [X] [ ]\n      [X] [ ] [X]"
+puts 'Connect 3 straight or diagonally to win'
+puts "\n                  PRESS ENTER WHEN YOU ARE READY"
+STDIN.noecho(&:gets).chomp
+game.clear
 
 sleep 1
 
@@ -24,6 +35,9 @@ puts 'Enter your name Player 2: '
 nickname2 = gets.chomp.capitalize
 player_two = Player.new(nickname2)
 puts ''
+
+game.clear
+# starts from here if resets
 token1 = player_one.token
 puts "#{nickname1} will be #{token1}"
 puts ''
@@ -34,12 +48,11 @@ puts ''
 puts 'Displaying the game board'
 puts ''
 
-sleep 2
+sleep 3
 
 d_board = Board.new
 
-system 'clear'
-system 'cls'
+game.clear
 
 puts ''
 puts d_board.display_boards
@@ -59,16 +72,19 @@ while on == true
     position = gets.chomp
     check = d_board.check(position)
     if check == 'INVALID OPTION'
+      game.clear
       puts ''
       puts 'INVALID OPTION! PLEASE INPUT IN AN EMPTY CELL'
+      sleep 2
+      puts ''
+      puts d_board.display_boards
     else
       d_board.replace(position, token)
       checked = true
     end
-    system 'clear'
-    system 'cls'
     puts ''
   end
+  game.clear
 
   if [1, 2, 3, 4, 5, 6, 7, 8, 9].include?(position.to_i)
     if turn.odd?
@@ -87,6 +103,10 @@ while on == true
   if d_board.win? == true
     if turn.odd?
       puts "CONGRATULATIONS #{nickname1}! You won!!"
+      puts 'Do you want to play again? [y/n]'
+      choice = gets.chomp.downcase
+      if game.reset(choice) == true
+      end
     else
       puts "CONGRATULATIONS #{nickname2}! You won!!"
     end

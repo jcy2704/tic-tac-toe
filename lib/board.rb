@@ -3,6 +3,29 @@
 # rubocop:disable Layout/LineLength
 # rubocop:disable Metrics/AbcSize
 
+# Class Game
+class Game
+  def initialize
+    @start = false
+    @reset = false
+
+  end
+
+  def start(choice)
+    @start = true
+    @start
+  end
+
+  def clear
+    system 'clear'
+    system 'cls'
+  end
+
+  def reset(input)
+    @reset = true if input.any?('y' || 'yes' || 'n' || 'no')
+  end
+end
+
 # Creates a Board Class
 class Board
   attr_accessor :slots
