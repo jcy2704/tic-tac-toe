@@ -1,8 +1,12 @@
+# frozen_string_literal: true
+
 # rubocop:disable Layout/LineLength
+# rubocop:disable Metrics/AbcSize
 class Board
   attr_accessor :slots
   def initialize
     @slots = { '1' => "\s", '2' => "\s", '3' => "\s", '4' => "\s", '5' => "\s", '6' => "\s", '7' => "\s", '8' => "\s", '9' => "\s" }
+    @win = false
   end
 
   def display_boards
@@ -15,24 +19,38 @@ class Board
 
   def check(input)
     return 'INVALID OPTION' unless @slots[input] == "\s"
-
-    return 'VALID'
   end
 
   def win?
-    @win = true if @slots['1'] == @slots['2'] && @slots['2'] == @slots['3']
-    @win = true if @slots['4'] == @slots['5'] && @slots['5'] == @slots['6']
-    @win = true if @slots['7'] == @slots['8'] && @slots['8'] == @slots['9']
-    @win = true if @slots['1'] == @slots['4'] && @slots['4'] == @slots['7']
-    @win = true if @slots['2'] == @slots['5'] && @slots['5'] == @slots['8']
-    @win = true if @slots['3'] == @slots['6'] && @slots['6'] == @slots['9']
-    @win = true if @slots['1'] == @slots['5'] && @slots['5'] == @slots['9']
-    @win = true if @slots['7'] == @slots['5'] && @slots['5'] == @slots['3']
+    @win = true if row_winner || col_winner || diag_winner
+    @win
+  end
+
+  def row_winner
+    @slots.values.first(3).all?('X') ||
+      @slots.values.first(3).all?('O') ||
+      @slots.slice('4', '5', '6').values.all?('X') ||
+      @slots.slice('4', '5', '6').values.all?('O') ||
+      @slots.values.last(3).all?('X') ||
+      @slots.values.last(3).all?('O')
+  end
+
+  def col_winner
+    @slots.slice('1', '4', '7').values.all?('X') ||
+      @slots.slice('2', '5', '8').values.all?('X') ||
+      @slots.slice('3', '6', '9').values.all?('X') ||
+      @slots.slice('1', '4', '7').values.all?('O') ||
+      @slots.slice('2', '5', '8').values.all?('O') ||
+      @slots.slice('3', '6', '9').values.all?('O')
+  end
+
+  def diag_winner
+    @slots.slice('1', '5', '9').values.all?('X') ||
+      @slots.slice('1', '5', '9').values.all?('O') ||
+      @slots.slice('3', '5', '7').values.all?('X') ||
+      @slots.slice('3', '5', '7').values.all?('O')
   end
 end
 
-
-
-
-
 # rubocop:enable Layout/LineLength
+# rubocop:enable Metrics/AbcSize
