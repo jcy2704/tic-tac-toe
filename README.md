@@ -33,7 +33,7 @@ The goals of this project are:
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+## Prerequisites
 Computer running Mac OS, Windows, or Linux Ubuntu.
 Internet browser: Firefox, Google Chrome, Opera...
 
