@@ -1,7 +1,7 @@
 # TIC TAC TOE
 Tic-tac-toe is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
 
-# Game Rules:
+## Game Rules:
 
 - Two player game
 - Player will have tokens or symbols (X or O)
@@ -10,7 +10,7 @@ Tic-tac-toe is a paper-and-pencil game for two players, X and O, who take turns 
 - The first player to complete a succession of 3 of their assigned symbol (O's or X's) in a row, column or diagonal wins!
 - If all of the cells are filled with a symbol and no player matched 3 symbols, the game ends in a tie.
 
-# About The Project
+## About The Project
 We created the game Tic Tac Toe using Ruby.
 
 The game has a basic interface that runs in the terminal.
