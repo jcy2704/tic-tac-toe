@@ -1,30 +1,53 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # TIC TAC TOE
+Tic-tac-toe is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
 
-Setup for the TIC TAC TOE
+<img width="524" alt="screen tic" src="https://user-images.githubusercontent.com/31552010/96631684-41254a00-12dc-11eb-8ffe-0425854564a9.png">
 
+## Game Rules:
+
+- Two player game
+- Player will have tokens or symbols (X or O)
+- Players take turns choosing a cell of the board to mark their symbol.
+- A player can only choose an empty cell if not will return an error until input is in an empty cell.
+- The first player to complete a succession of 3 of their assigned symbol (O's or X's) in a row, column or diagonal wins!
+- If all of the cells are filled with a symbol and no player matched 3 symbols, the game ends in a tie.
+
+## About The Project
+We created the game Tic Tac Toe using Ruby.
+
+The game has a basic interface that runs in the terminal.
+
+The goals of this project are:
+
+- Practice with OOP (Object Oriented Programming) using Ruby.
+- Learn how to create and structure a Ruby project.
+- Learn to manage the files with correct usage to make code maintainable.
+- Practice Git Flow and Github Flow creating branches for different features and for version control.
+- This is part of the Odin project curriculum https://www.theodinproject.com/courses/ruby-programming/lessons/oop
+
+# Getting Started
 
 ## Built With
 
 - Ruby
 
-## Getting Started
-
 **Setup for starting the TIC TAC TOE**
-
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+## Prerequisites
 Computer running Mac OS, Windows, or Linux Ubuntu.
 Internet browser: Firefox, Google Chrome, Opera...
 
-### Setup
-Download the code or copy the git repository to your computer.
+## Installation
 
-### Usage
-To run our project type 'bin/main.rb' in your terminal where your file is stored.
+You can download the repo or clone (paste on the terminal) `git clone git@github.com:jcy2704/oop_ruby.git`
+
+You will need to execute the main.rb file located inside the bin folder. If you are using Window, follow next step. If you are using Linux or Mac.
+
+Open the terminal and navigate to the folder using `cd path-to-folder` containing the tic-tac-toe game. Once you are inside, your terminal should look like this: User/<folder>/oop-ruby/. You can type or paste this on terminal `bin/main.rb` to run the game.
+
+Enjoy our project!!
 
 
 ## Authors
