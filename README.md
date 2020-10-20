@@ -1,6 +1,8 @@
 # TIC TAC TOE
 Tic-tac-toe is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
 
+<img width="524" alt="screen tic" src="https://user-images.githubusercontent.com/31552010/96631684-41254a00-12dc-11eb-8ffe-0425854564a9.png">
+
 ## Game Rules:
 
 - Two player game
