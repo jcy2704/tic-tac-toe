@@ -43,7 +43,7 @@ You can download the repo or clone (paste on the terminal) `git clone git@github
 
 You will need to execute the main.rb file located inside the bin folder. If you are using Window, follow next step. If you are using Linux or Mac.
 
-Open the terminal and navigate to the folder using `cd directory` containing the tic-tac-toe game. Once you are inside, your terminal should look like this: User/<folder>/oop-ruby/. You can type or paste this on terminal `bin/main.rb` to run the game.
+Open the terminal and navigate to the folder using `cd path-to-folder` containing the tic-tac-toe game. Once you are inside, your terminal should look like this: User/<folder>/oop-ruby/. You can type or paste this on terminal `bin/main.rb` to run the game.
 
 Enjoy our project!!
 
