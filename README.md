@@ -41,7 +41,7 @@ To get a local copy up and running follow these simple example steps.
 Computer running Mac OS, Windows, or Linux Ubuntu.
 Internet browser: Firefox, Google Chrome, Opera...
 
-##Installation
+## Installation
 
 You can download the repo or clone (paste on the terminal) git clone git@github.com:jcy2704/oop_ruby.git
 
