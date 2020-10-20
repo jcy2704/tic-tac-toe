@@ -1,7 +1,4 @@
-# frozen_string_literal: true
-
 # rubocop:disable Layout/LineLength
-# rubocop:disable Metrics/AbcSize
 
 # Class Game
 class Game
@@ -79,4 +76,3 @@ class Board
 end
 
 # rubocop:enable Layout/LineLength
-# rubocop:enable Metrics/AbcSize
