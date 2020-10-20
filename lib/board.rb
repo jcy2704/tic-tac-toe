@@ -8,10 +8,9 @@ class Game
   def initialize
     @start = false
     @reset = false
-
   end
 
-  def start(choice)
+  def start
     @start = true
     @start
   end
@@ -22,7 +21,9 @@ class Game
   end
 
   def reset(input)
-    @reset = true if input.any?('y' || 'yes' || 'n' || 'no')
+    @reset = true if input.include?('y' || 'yes')
+    @reset = false if input.include?('n' || 'no')
+    @reset
   end
 end
 

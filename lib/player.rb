@@ -8,19 +8,20 @@ class Player
     @players = {}
     @tokens = %w[X O]
     @points = 0
+    @players[@name] = @points
   end
 
   def token
     @tokens.shuffle.each { |n| return n }
   end
 
-  def won(player)
+  def won
     @points += 1
-    @players[player] = @points
+    @players[@name] = @points
   end
 
-  def score(player)
-    @players[player]
+  def score
+    @players[@name]
   end
 end
 
