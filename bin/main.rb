@@ -7,8 +7,6 @@ require_relative '../lib/player.rb'
 require_relative '../lib/board.rb'
 require 'io/console'
 
-
-
 system 'clear'
 system 'cls'
 game = Game.new
@@ -19,7 +17,7 @@ puts '                   by Jack Chung and David Leonardo'
 puts "\nInstructions: \n"
 puts '1. Both players need to input their nicknames.'
 puts '2. After naming, you will see your assigned token (X or O)'
-puts '3. To win the game you need to connect 3 of your token in a liwon near way.'
+puts '3. To win the game you need to connect 3 of your token in a linear way.'
 puts "For example:\n      [X] [X] [X]\n      [X] [X] [ ]\n      [X] [ ] [X]"
 puts 'Connect 3 straight or diagonally to win'
 puts "\n                  PRESS ENTER WHEN YOU ARE READY"
