@@ -118,7 +118,7 @@ until start == false
       puts 'Do you want to play again? [y/n]'
       choice = gets.chomp.downcase
       if game.reset(choice) == true
-        puts ''
+        puts ' '
         puts 'Here is the scoreboard:'
         puts "#{nickname1}: #{player_one.score} games"
         puts "#{nickname2}: #{player_two.score} games"
