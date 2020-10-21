@@ -131,6 +131,7 @@ until start == false
         puts "#{nickname2}: #{player_two.score} games"
         start = false
       end
+      finish = false
       on = false
     end
     turn += 1
