@@ -136,13 +136,13 @@ You will need to execute the tictactoe file located inside the bin folder. If yo
 
 ### Windows
 
-Open the terminal and navigate to the folder using `cd path-to-folder` containing the tic-tac-toe game. Once you are inside, your terminal should look like this: User/<folder>/oop-ruby/. You can type or paste this on terminal `tictactoe` to run the game.
+Open the terminal and navigate to the folder using `cd path-to-folder` containing the tic-tac-toe game. Once you are inside, your terminal should look like this: User/<folder>/oop-ruby/. You can type or paste this on terminal `bin/tictactoe` to run the game.
 
 ### Mac and Linux
 
 Most Mac and some of Linux computers come with ruby installed, but still need to verify by typing in your terminal `ruby --version` if not please go back to [Installation](#installation) section.
 
-After verifying you have ruby installed and completing the [Installation](#installation) section, just open the terminal and run `tictactoe`
+After verifying you have ruby installed and completing the [Installation](#installation) section, open the terminal navigate using `cd path-to-folder` containing the tic-tac-toe game and run in the terminal `bin/tictactoe` to run the game.
 
 ### Live Preview
 [Tic-tac-toe](https://repl.it/@jcy2704/tic-tac-toe#bin/tictactoe.rb)
