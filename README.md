@@ -129,7 +129,7 @@ Have Ruby installed you can see this link for more detailed instructions [Instal
 
 You MUST have Ruby installed in your system. If you don't have it installed you can go this page [Install Ruby](https://www.theodinproject.com/courses/web-development-101/lessons/installing-ruby)
 
-After installing ruby, you can download the repo or clone it (paste on the terminal) `git clone git@github.com:jcy2704/oop_ruby.git`
+After installing ruby, you can download the repo or clone it (paste on the terminal) `git clone git@github.com:jcy2704/tic-tac-toe.git`
 
 ## 💻 Run Tic-Tac-Toe
 You will need to execute the tictactoe file located inside the bin folder. If you are using Window, follow next step.
