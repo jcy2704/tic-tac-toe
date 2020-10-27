@@ -1,4 +1,4 @@
-# rubocop:disable Layout/LineLength
+# rubocop:disable Metrics/BlockLength
 
 require './lib/board.rb'
 require './lib/player.rb'
@@ -86,7 +86,7 @@ describe Board do
   end
 
   describe '#col_winner' do
-    it 'checks if row aligned with same token' do
+    it 'checks if columns aligned with same token' do
       board.replace('1', 'X')
       board.replace('4', 'X')
       board.replace('7', 'X')
@@ -104,7 +104,7 @@ describe Board do
   end
 
   describe '#diag_winner' do
-    it 'checks if row aligned with same token' do
+    it 'checks if diagonal aligned with same token' do
       board.replace('1', 'X')
       board.replace('5', 'X')
       board.replace('9', 'X')
@@ -122,4 +122,4 @@ describe Board do
   end
 end
 
-# rubocop:enable Layout/LineLength
+# rubocop:enable Metrics/BlockLength

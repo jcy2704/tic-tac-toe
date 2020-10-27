@@ -34,6 +34,7 @@
 - [💻 Run Tic-Tac-Toe](#run-tic-tac-toe)
   - [Windows](#windows)
   - [Mac and Linux](#mac-and-linux)
+- [Testing with Rspec](#test-code-with-rspec)
 - [👥 Authors](#authors)
 - [🤝 Contributing](#-contributing)
 - [⭐ Show your support](#show-your-support)
@@ -144,6 +145,10 @@ Most Mac and some of Linux computers come with ruby installed, but still need to
 
 After verifying you have ruby installed and completing the [Installation](#installation) section, open the terminal navigate using `cd path-to-folder` containing the tic-tac-toe game and run in the terminal `bin/tictactoe` to run the game.
 
+# Test Code with Rspec
+
+To be able to test your code with Rspec, you should have Ruby and Rspec installed in your computer. To install rspec type in your terminal `gem install rspec`. After installing rspec, just got to the project folder and run `rspec` in the terminal.
+
 ### Live Preview
 [Tic-tac-toe](https://repl.it/@jcy2704/tic-tac-toe#bin/tictactoe.rb)
 
@@ -162,6 +167,12 @@ After verifying you have ruby installed and completing the [Installation](#insta
 - Github: [@David Castillo](https://github.com/Fanger53)
 - Twitter: [@David Castillo](https://twitter.com/DavidLe97005129)
 - Linkedin: [@David Castillo](https://www.linkedin.com/in/david-castillo-61ba10b8/)
+
+👤 **A B M Asadullah**
+
+- Github: [@abmasadullah](https://github.com/abmasadullah)
+- Twitter: [@abmasadullah](https://twitter.com/abmasadullah)
+- Linkedin: [@abmasadullah](https://www.linkedin.com/in/abmasadullah/)
 
 ## 🤝 Contributing
 
