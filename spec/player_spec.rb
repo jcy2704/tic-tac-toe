@@ -23,9 +23,9 @@ describe Player do
 end
 
 describe '#leftover' do
-  let(:two){''}
-  it '' do
-    expect(leftover('X',two)).to eq('O')
-    expect(leftover('O',two)).to eq('X')
+  let(:two) { '' }
+  it 'assign leftover token' do
+    expect(leftover('X', two)).to eq('O')
+    expect(leftover('O', two)).to eq('X')
   end
 end
