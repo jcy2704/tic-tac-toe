@@ -84,6 +84,42 @@ describe Board do
       expect(board.row_winner).to be false
     end
   end
+
+  describe '#col_winner' do
+    it 'checks if row aligned with same token' do
+      board.replace('1', 'X')
+      board.replace('4', 'X')
+      board.replace('7', 'X')
+
+      expect(board.col_winner).to be true
+    end
+
+    it 'return false if not aligned' do
+      board.replace('2', 'X')
+      board.replace('5', 'O')
+      board.replace('8', 'X')
+
+      expect(board.col_winner).to be false
+    end
+  end
+
+  describe '#diag_winner' do
+    it 'checks if row aligned with same token' do
+      board.replace('1', 'X')
+      board.replace('5', 'X')
+      board.replace('9', 'X')
+
+      expect(board.diag_winner).to be true
+    end
+
+    it 'return false if not aligned' do
+      board.replace('1', 'X')
+      board.replace('5', 'O')
+      board.replace('9', 'X')
+
+      expect(board.diag_winner).to be false
+    end
+  end
 end
 
 # rubocop:enable Layout/LineLength
