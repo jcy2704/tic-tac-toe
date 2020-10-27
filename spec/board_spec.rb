@@ -1,5 +1,3 @@
-# rubocop:disable Metrics/BlockLength
-
 require './lib/board.rb'
 require './lib/player.rb'
 
