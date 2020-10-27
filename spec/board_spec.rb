@@ -119,5 +119,3 @@ describe Board do
     end
   end
 end
-
-# rubocop:enable Metrics/BlockLength
