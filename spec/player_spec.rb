@@ -14,4 +14,18 @@ describe Player do
       expect(player.won).to be_an(Integer)
     end
   end
+
+  describe '#score' do
+    it '' do
+      expect(player.score).to be_an(Integer)
+    end
+  end
+end
+
+describe '#leftover' do
+  let(:two){''}
+  it '' do
+    expect(leftover('X',two)).to eq('O')
+    expect(leftover('O',two)).to eq('X')
+  end
 end
