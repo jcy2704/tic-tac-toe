@@ -20,3 +20,25 @@ describe Game do
     end
   end
 end
+
+describe '' do
+  let(:board) { Board.new }
+  describe '' do
+    it '' do
+      expect(board.display_boards).to be_a String
+    end
+  end
+
+  describe '' do
+    it '' do
+      expect(board.replace('1', 'X')).to eq('X')
+    end
+  end
+
+  describe '' do
+    it '' do
+      expect(board.check('1')).to eq(nil)
+    end
+  end
+
+end
