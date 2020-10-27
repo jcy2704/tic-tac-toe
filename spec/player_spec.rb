@@ -7,7 +7,7 @@ describe Player do
 
   describe '#token' do
     it 'gives player a token (X, O)' do
-      expect(player.token).to satisfy { |token| token.include?('X' || 'O') }
+      expect(player.token).to satisfy { |token| token.include?('X') || token.include?('O') }
     end
   end
 
