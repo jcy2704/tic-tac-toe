@@ -1,5 +1,5 @@
-require './lib/board.rb'
-require './lib/player.rb'
+require_relative '../lib/board.rb'
+require_relative '../lib/player.rb'
 
 describe Game do
   let(:game) { Game.new }
@@ -7,6 +7,12 @@ describe Game do
   describe '#start' do
     it 'return true if game start' do
       expect(game.start).to be true
+    end
+  end
+
+  describe '#clear' do
+    it 'clear the terminal' do
+      expect(game.clear).to be true
     end
   end
 
