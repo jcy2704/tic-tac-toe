@@ -1,5 +1,5 @@
-require_relative '../lib/board.rb'
-require_relative '../lib/player.rb'
+require_relative '../lib/board'
+require_relative '../lib/player'
 
 describe Game do
   let(:game) { Game.new }
