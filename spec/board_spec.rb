@@ -12,7 +12,7 @@ describe Game do
 
   describe '#clear' do
     it 'clear the terminal' do
-      expect(game.clear).to be true
+      expect(game.clear).to be nil
     end
   end
 
